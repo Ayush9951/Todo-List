@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <img src="/images/cloud.png" alt="cloud">
+        <div class="main-container">
+            <div class="date-container">
+                <h1 class="date"><%= date %></h1> 
+             </div>
+             <div class="container">
+               
+                 <form action="/" method="POST">
+                     <input class="input-box" type="text" name="enteredListItem">
+                     <button type="submit" class="add-button">Add</button>
+                     <button type="submit" class="reset-button" name="reset" value="reset">Reset</button>
+                 </form>
+     
+                 <ul>
+                         <% Items.forEach((i) => { %>
+                             <div class="list-box">
+                                 <input class="check-box" type="checkbox" >
+                                 <h3 class="list-container"> <li   class="list" type="circle" > <%= i %></li> </h3>
+                             </div>
+                                  
+                            <% })%>
+                          
+                 </ul>
+             </div>
+        </div>
+        
+
+       
+          
+    </body>
+</html>
